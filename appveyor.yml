@@ -15,9 +15,9 @@ for:
     only:
       - image: Visual Studio 2017
 
-    - PYTHON: "C:\\Python36-x64"
-      PYTHON_VERSION: "3.6.6"
-      PYTHON_ARCH: "64"
+      - PYTHON: "C:\\Python36-x64"
+        PYTHON_VERSION: "3.6.6"
+        PYTHON_ARCH: "64"
 
   environment:
     GEO_BIT: '64'
@@ -29,9 +29,9 @@ for:
   matrix:
     only:
       - image: Visual Studio 2017
-    - PYTHON: "C:\\Python27.10-x64"
-      PYTHON_VERSION: "2.7.10"
-      PYTHON_ARCH: "64"
+      - PYTHON: "C:\\Python27.10-x64"
+        PYTHON_VERSION: "2.7.10"
+        PYTHON_ARCH: "64"
 
   environment:
     GEO_BIT: '32'
@@ -43,9 +43,9 @@ for:
   matrix:
     only:
       - image: Visual Studio 2017
-    - PYTHON: "C:\\Python36"
-      PYTHON_VERSION: "3.6.6"
-      PYTHON_ARCH: "32"
+      - PYTHON: "C:\\Python36"
+        PYTHON_VERSION: "3.6.6"
+        PYTHON_ARCH: "32"
 
   environment:
     GEO_BIT: '32'
@@ -57,9 +57,9 @@ for:
   matrix:
     only:
       - image: Visual Studio 2017
-    - PYTHON: "C:\\Python27.10"
-      PYTHON_VERSION: "2.7.10"
-      PYTHON_ARCH: "32"
+      - PYTHON: "C:\\Python27.10"
+        PYTHON_VERSION: "2.7.10"
+        PYTHON_ARCH: "32"
 
   environment:
     GEO_BIT: '32'
