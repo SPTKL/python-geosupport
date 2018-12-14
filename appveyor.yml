@@ -82,7 +82,7 @@ for:
 #    alias pip=pip3
 
 
-install:
+build_script:
   - ps ./appveyor/install.ps1
   # - sh ./appveyor/install-linux.sh
 
