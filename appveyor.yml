@@ -9,75 +9,76 @@ environment:
   GEO_VERSION: '18b'
 
 for:
-  # Windows w/64 bit Geo & python 3.6
-  -
-    matrix:
-      - PYTHON: "C:\\Python36-x64"
-        PYTHON_VERSION: "3.6.6"
-        PYTHON_ARCH: "64"
-      only:
-        - image: Visual Studio 2017
-    environment:
-      PYTHON: "C:\\Python36-x64"
-      GEO_BIT: '64'
-    #cmd: set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%
+# Windows w/64 bit Geo & python 3.6
+-
+  matrix:
+    only:
+      - image: Visual Studio 2017
+
+    - PYTHON: "C:\\Python36-x64"
+      PYTHON_VERSION: "3.6.6"
+      PYTHON_ARCH: "64"
+
+  environment:
+    GEO_BIT: '64'
+  #cmd: set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%
 
 
-  # Windows w/64 bit Geo & python 2.7
-  -
-    matrix:
-      - PYTHON: "C:\\Python27.10-x64"
-        PYTHON_VERSION: "2.7.10"
-        PYTHON_ARCH: "64"
-      only:
-        - image: Visual Studio 2017
-    environment:
-      PYTHON: "C:\\Python27.10"
-      GEO_BIT: '32'
-    #cmd: set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%
+# Windows w/64 bit Geo & python 2.7
+-
+  matrix:
+    only:
+      - image: Visual Studio 2017
+    - PYTHON: "C:\\Python27.10-x64"
+      PYTHON_VERSION: "2.7.10"
+      PYTHON_ARCH: "64"
+
+  environment:
+    GEO_BIT: '32'
+  #cmd: set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%
 
 
-  # Windows w/32 bit Geo & python 3.6
-  -
-    matrix:
-      - PYTHON: "C:\\Python36"
-        PYTHON_VERSION: "3.6.6"
-        PYTHON_ARCH: "32"
-      only:
-        - image: Visual Studio 2017
-    environment:
-      PYTHON: "C:\\Python27.10"
-      GEO_BIT: '32'
-    #cmd: set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%
+# Windows w/32 bit Geo & python 3.6
+-
+  matrix:
+    only:
+      - image: Visual Studio 2017
+    - PYTHON: "C:\\Python36"
+      PYTHON_VERSION: "3.6.6"
+      PYTHON_ARCH: "32"
+
+  environment:
+    GEO_BIT: '32'
+  #cmd: set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%
 
 
-  # Windows w/32 bit Geo & python 2.7
-  -
-    matrix:
-      - PYTHON: "C:\\Python27.10"
-        PYTHON_VERSION: "2.7.10"
-        PYTHON_ARCH: "32"
-      only:
-        - image: Visual Studio 2017
-    environment:
-      PYTHON: "C:\\Python27.10"
-      GEO_BIT: '32'
-    #cmd: set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%
+# Windows w/32 bit Geo & python 2.7
+-
+  matrix:
+    only:
+      - image: Visual Studio 2017
+    - PYTHON: "C:\\Python27.10"
+      PYTHON_VERSION: "2.7.10"
+      PYTHON_ARCH: "32"
+
+  environment:
+    GEO_BIT: '32'
+  #cmd: set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%
 
 
-  # Ubuntu - python 2.7
-  -
-    matrix:
-      only:
-        - image: Ubuntu
+# Ubuntu - python 2.7
+-
+  matrix:
+    only:
+      - image: Ubuntu
 
-  # Ubuntu - python 3.6
-  -
-    matrix:
-      only:
-        - image: Ubuntu
-    sh: alias python=python3
-    sh: alias pip=pip3
+# Ubuntu - python 3.6
+-
+  matrix:
+    only:
+      - image: Ubuntu
+  sh: alias python=python3
+  sh: alias pip=pip3
 
 
 install:
