@@ -77,8 +77,7 @@ for:
   matrix:
     only:
       - image: Ubuntu
-  sh: alias python=python3
-  sh: alias pip=pip3
+  sh: alias python=python3 && alias pip=pip3
 
 
 install:
