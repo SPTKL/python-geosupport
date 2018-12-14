@@ -14,29 +14,18 @@ for:
   matrix:
     only:
       - image: Visual Studio 2017
-
-      - PYTHON: "C:\\Python36-x64"
+        PYTHON: "C:\\Python36-x64"
         PYTHON_VERSION: "3.6.6"
         PYTHON_ARCH: "64"
-
-  environment:
-    GEO_BIT: '64'
-  #cmd: set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%
-
 
 # Windows w/64 bit Geo & python 2.7
 -
   matrix:
     only:
       - image: Visual Studio 2017
-      - PYTHON: "C:\\Python27.10-x64"
+        PYTHON: "C:\\Python27.10-x64"
         PYTHON_VERSION: "2.7.10"
         PYTHON_ARCH: "64"
-
-  environment:
-    GEO_BIT: '32'
-  #cmd: set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%
-
 
 # Windows w/32 bit Geo & python 3.6
 -
@@ -47,11 +36,6 @@ for:
         PYTHON_VERSION: "3.6.6"
         PYTHON_ARCH: "32"
 
-  environment:
-    GEO_BIT: '32'
-  #cmd: set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%
-
-
 # Windows w/32 bit Geo & python 2.7
 -
   matrix:
@@ -61,10 +45,6 @@ for:
         PYTHON_VERSION: "2.7.10"
         PYTHON_ARCH: "32"
 
-  environment:
-    GEO_BIT: '32'
-  #cmd: set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%
-
 
 # Ubuntu - python 2.7
 -
@@ -72,14 +52,6 @@ for:
     only:
       - image: Ubuntu
 
-## Ubuntu - python 3.6
-#-
-#  matrix:
-#    only:
-#      - image: Ubuntu
-#  sh: |
-#    alias python=python3
-#    alias pip=pip3
 
 
 build_script:

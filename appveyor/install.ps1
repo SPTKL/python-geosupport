@@ -1,6 +1,9 @@
-if ($isWindows AND $env:GEO_BIT -eq '64'){
+Write-Host "Python Arch = $env:PYTHON_ARCH"
+Write-Host "Is Windows = $isWindows"
+
+if ($isWindows AND $env:PYTHON_ARCH -eq '64'){
     # download and install for windows x64 here
-    Write-Host "Downloading $env:GEO_BIT bit Geosuport version $env:GEO_VERSION for Windows..."
+    Write-Host "Downloading $env:PYTHON_ARCH bit Geosuport version $env:GEO_VERSION for Windows..."
     curl https://www1.nyc.gov/assets/planning/download/zip/data-maps/open-data/gde64_$env:GEO_VERSION.zip -O -sL
     Write-Host "Extracting..."
     unzip gde64_$env:GEO_VERSION.zip  -d geosupport
@@ -10,9 +13,9 @@ if ($isWindows AND $env:GEO_BIT -eq '64'){
     setup.exe
     Write-Host "Install complete."
 }
-elseif ($isWindows AND $env:GEO_BIT -eq '32') {
+elseif ($isWindows AND $env:PYTHON_ARCH -eq '32') {
     # download and install for windows x64 here
-    Write-Host "Downloading $env:GEO_BIT bit Geosuport version $env:GEO_VERSION for Windows..."
+    Write-Host "Downloading $env:PYTHON_ARCH bit Geosuport version $env:GEO_VERSION for Windows..."
     curl https://www1.nyc.gov/assets/planning/download/zip/data-maps/open-data/gde_$env:GEO_VERSION.zip -O -sL
     Write-Host "Extracting..."
     unzip gde_$env:GEO_VERSION.zip  -d geosupport
