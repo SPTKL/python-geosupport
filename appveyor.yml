@@ -72,14 +72,14 @@ for:
     only:
       - image: Ubuntu
 
-# Ubuntu - python 3.6
--
-  matrix:
-    only:
-      - image: Ubuntu
-  sh: |
-    alias python=python3
-    alias pip=pip3
+## Ubuntu - python 3.6
+#-
+#  matrix:
+#    only:
+#      - image: Ubuntu
+#  sh: |
+#    alias python=python3
+#    alias pip=pip3
 
 
 install:
